@@ -1,0 +1,16 @@
+<aura:component description="TabLayoutItem" >
+	<aura:attribute name="tabIndex" type="String" />
+	<aura:attribute name="tabName" type="String" />
+	<aura:attribute name="content" type="Aura.Component[]" />
+
+	<aura:handler name="init" value="{!this}" action="{!c.init}" />
+	<aura:handler event="c:ClickedTab" action="{!c.handleClickedTab}" />
+
+	<div aura:id="tabContent"
+		class="slds-tabs_default__content slds-hide"
+		role="tabpanel"
+		aria-labelledby="tab-default-1__item" >
+
+		{!v.content}
+	</div>
+</aura:component>

@@ -1,0 +1,15 @@
+<aura:component description="TabLayout" >
+	<aura:attribute name="tabHeaders" type="Aura.Component[]" />
+	<aura:attribute name="tabItems" type="Aura.Component[]" />
+
+	<div class="slds-tabs_default">
+		<ul class="slds-tabs_default__nav" role="tablist">
+
+			{!v.tabHeaders}
+
+		</ul>
+
+		{!v.tabItems}
+
+	</div>
+</aura:component>

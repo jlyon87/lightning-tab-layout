@@ -1,0 +1,14 @@
+<aura:component description="TabLayoutHeader" >
+	<aura:attribute name="tabName" type="String" />
+	<aura:attribute name="tabLabel" type="String" />
+	<aura:attribute name="tabIndex" type="Integer" />
+
+	<aura:handler name="init" value="{!this}" action="{!c.init}" />
+	<aura:handler event="c:ClickedTab" action="{!c.handleClickedTab}" />
+
+	<li aura:id="tab__label" class="slds-tabs_default__item" title="Item One" role="presentation">
+		<a class="slds-tabs_default__link" href="javascript:void(0);" role="tab" tabindex="0" aria-selected="true" aria-controls="tab-default-1" onclick="{!c.clickTab}">
+			{!v.tabLabel}
+		</a>
+	</li>
+</aura:component>
